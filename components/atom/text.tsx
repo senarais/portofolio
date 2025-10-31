@@ -7,7 +7,7 @@ function Text() {
     "a front-end developer",
     "a back-end developer",
     "a crazy data fetcher",
-    "the world's best samurai",
+    "world's best samurai",
   ];
 
   const [index, setIndex] = useState(0);
@@ -29,7 +29,7 @@ function Text() {
   return (
     <div className="w-full h-fit flex flex-col gap-4 justify-center items-center mt-25 text-center">
       <h1 className="text-black text-6xl">
-        hola! - <span className="text-blue-primary font-medium">it's sena</span>
+        hola! - <span className="text-blue-tertiary font-medium">it's sena</span>
       </h1>
 
       <p className="text-black text-2xl font-extralight flex justify-center items-center gap-2">
