@@ -22,10 +22,10 @@ function Card({ src, label, onClick }: CardProps) {
   return (
     <div
       onClick={handleClick}
-      className="relative cursor-pointer flex justify-center items-center w-[120px] h-[120px] rounded-xl"
+      className="relative shadow-sm shadow-black-primary cursor-pointer bg-blue-secondary flex justify-center items-center w-[90px] h-[90px] rounded-xl"
     >
       <img
-        className="w-[90px] transition-transform duration-300 ease-in-out group-hover:scale-110"
+        className="w-[70px] transition-transform duration-300 ease-in-out group-hover:scale-110"
         src={src}
         alt={label}
       />
