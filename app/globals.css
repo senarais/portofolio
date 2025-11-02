@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
-/* ============================= */
+/* GLOBAL ANTI-SCROLL FIX */
+html, body {
+    overflow: hidden; 
+    width: 100%;
+    height: 100%; 
+    overscroll-behavior: none;
+}
+
+/* HACK: FIX Address Bar Mobile/Viewport */
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 /* Base Variables (Default Light)*/
-/* ============================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,25 +28,20 @@
   --color-blue-tertiary: #547792;
 }
 
-/* ============================= */
-/* Manual Dark Mode Override 🌙  */
-/* (Aktif saat <html data-theme="dark">) */
-/* ============================= */
+/* Manual Dark Mode Override */
 :root[data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
 
   --color-white-primary: #1E1E2F;
   --color-white-secondary: #2A2A3D;
-  --color-black-primary: #EDEDED; /* text terang biar kebaca */
+  --color-black-primary: #EDEDED;
   --color-blue-primary: #88C0D0;
   --color-blue-secondary: #5E81AC;
   --color-blue-tertiary: #81A1C1;
 }
 
-/* ============================= */
-/* Tailwind Theme Bindings       */
-/* ============================= */
+/* Tailwind Theme Bindings */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -45,10 +53,7 @@
   --color-blue-tertiary: var(--color-blue-tertiary);
 }
 
-/* ============================= */
 /* Fallback ke prefers-color-scheme */
-/* (kalau user belum toggle manual) */
-/* ============================= */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --background: #0a0a0a;
@@ -63,9 +68,7 @@
   }
 }
 
-/* ============================= */
-/* Base Body Styles              */
-/* ============================= */
+/* Base Body Styles */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -73,9 +76,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* ============================= */
-/* Animasi floaty untuk penguin  */
-/* ============================= */
+/* Animasi floaty untuk penguin */
 .floaty {
   animation: floaty 3s ease-in-out infinite;
 }
