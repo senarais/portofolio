@@ -95,15 +95,16 @@ export default function Home() {
         onClick={handlePenguinClick}
         className="
           absolute 
-          w-[clamp(100px,15vw,180px)] 
+          w-[clamp(100px,12vw,150px)] 
           bottom-2 right-2 
-          z-5 
+          z-4
           cursor-pointer 
           floaty 
           transition-all duration-500 ease-in-out 
           pointer-events-auto select-none
         "
       />
+
 
       {/* 🌊 Wave Background */}
       <Wave
@@ -119,7 +120,10 @@ export default function Home() {
       />
 
       {/* 💼 Card utama */}
-      <div className="relative w-[750px] h-[500px] top-10 p-4 bg-white-primary rounded-xl border border-gray-400 shadow-xl z-10 transition-colors duration-300">
+      <div
+        style={{ width: 'clamp(400px, 80%, 750px)' }}
+        className="relative h-[500px] top-10 p-4 bg-white-primary rounded-xl border border-gray-400 shadow-xl z-10 transition-all duration-300"
+      >        
         {/* Header */}
         <div className="absolute text-white-secondary top-0 left-0 rounded-t-xl w-full h-[60px] bg-blue-primary flex items-center pl-6 text-xl z-10 transition-colors duration-300">
           <p>home</p>
@@ -150,7 +154,7 @@ export default function Home() {
         <Motion className="left-[30px] top-5" isVisible={showAbout}>
           <About onClose={() => setShowAbout(false)} />
         </Motion>
-        <Motion className="left-[-70px] top-[30px]" isVisible={showProject}>
+        <Motion className="left-[-120px] top-[30px]" isVisible={showProject}>
           <Project onClose={() => setShowProject(false)} />
         </Motion>
         <Motion className="left-[30px] top-5" isVisible={showLinks}>
@@ -159,6 +163,10 @@ export default function Home() {
         <Motion className="left-[30px] top-5" isVisible={showContact}>
           <Contact onClose={() => setShowContact(false)} />
         </Motion>
+      </div>
+      {/* Footer Copyright */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm text-blue-primary select-none pointer-events-none">
+        © {new Date().getFullYear()} Abisena Rais
       </div>
     </div>
   );

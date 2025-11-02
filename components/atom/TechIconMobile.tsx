@@ -18,19 +18,19 @@ export default function TechIcon({ src, alt, label }: TechIconProps) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Icon — sekarang kotak */}
+      {/* Icon */}
       <img
-        className="w-[70px] h-[70px] p-2 border border-black bg-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-[1.03]"
+        className="w-[70px] h-[70px] p-2 border border-gray-400 bg-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-[1.03]"
         src={src}
         alt={alt}
       />
 
-      {/* Label (fade in/out) */}
+      {/* Label */}
       <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: hovered ? 1 : 0, y: hovered ? 0 : 10 }}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: hovered ? 1 : 0, y: hovered ? 0 : 8 }}
         transition={{ duration: 0.25, ease: "easeInOut" }}
-        className="absolute z-30 bottom-[-35px] text-black-primary text-sm px-3 py-1 rounded-md bg-white/70 backdrop-blur-sm shadow-sm"
+        className="absolute z-30 -bottom-7 text-black-primary text-xs px-2 py-1 rounded-md bg-white/70 backdrop-blur-sm shadow-sm"
       >
         {label}
       </motion.p>

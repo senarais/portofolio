@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Howl } from "howler";
 import SocialLink from "./atom/SocialLinkMobile";
-import { XCircleIcon } from "@heroicons/react/24/outline";
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   onClose: () => void;
@@ -38,7 +38,7 @@ export default function LinksMobile({ onClose, theme }: Props) {
           whileTap={{ scale: 0.9 }}
           aria-label="Close links section"
         >
-          <XCircleIcon className="w-10 h-10 cursor-pointer text-white-primary" />
+          <ChevronDoubleDownIcon className="w-9 h-9 p-2 rounded-full hover:bg-white-secondary/20 cursor-pointer transition-colors duration-300" />
         </motion.button>
       </div>
 

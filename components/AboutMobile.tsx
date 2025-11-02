@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Howl } from "howler";
-import { XCircleIcon } from "@heroicons/react/24/outline";
+import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   onClose: () => void;
@@ -29,7 +29,7 @@ export default function AboutMobile({ onClose }: Props) {
           whileTap={{ scale: 0.9 }}
           aria-label="Close about section"
         >
-          <XCircleIcon className="w-8 h-8 cursor-pointer text-white-primary" />
+          <ChevronDoubleDownIcon className="w-9 h-9 p-2 rounded-full hover:bg-white-secondary/20 cursor-pointer transition-colors duration-300" />
         </motion.button>
       </div>
 

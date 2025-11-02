@@ -39,7 +39,7 @@ export default function Project({ onClose }: Props) {
       {/* content wrapper */}
       <div className="mt-[45px] flex flex-col h-full -mx-4 overflow-y-auto">
         {/* top (tech stack) */}
-        <div className="h-[270px] flex flex-col gap-6 items-center border-b border-gray-400 py-5 pl-15 pr-4">
+        <div className="h-[350px] flex flex-col gap-6 items-center border-b border-gray-400 py-5 pl-15 pr-4">
           <div className="text-black-primary text-lg font-light">
             <h1 className="text-5xl text-blue-primary mb-2 font-light">
               this is my tech stack.

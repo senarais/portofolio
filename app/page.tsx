@@ -10,7 +10,7 @@ export default function Page() {
   useEffect(() => {
     // 🖥️ Deteksi awal
     const checkWidth = () => {
-      setIsMobile(window.innerWidth < 768); // <1024px = mobile/tablet
+      setIsMobile(window.innerWidth < 900); // <1024px = mobile/tablet
     };
 
     checkWidth(); // jalankan pertama kali

@@ -6,10 +6,10 @@ import Card from "@/components/atom/CardMobile";
 import Text from "@/components/atom/TextMobile";
 import About from "@/components/AboutMobile";
 import Motion from "@/components/atom/MotionMobile";
-import Project from "@/components/Project";
+import Project from "@/components/ProjectMobile";
 import Wave from "react-wavify";
 import Links from "@/components/LinksMobile";
-import Contact from "@/components/Contact";
+import Contact from "@/components/ContactMobile";
 
 export default function HomeMobile() {
   const [showAbout, setShowAbout] = useState(false);
@@ -97,7 +97,7 @@ export default function HomeMobile() {
           absolute 
           w-[clamp(100px,15vw,180px)] 
           bottom-2 right-2 
-          z-5 
+          z-15
           cursor-pointer 
           floaty 
           transition-all duration-500 ease-in-out 
@@ -111,11 +111,11 @@ export default function HomeMobile() {
         paused={false}
         options={{
           height: 30,
-          amplitude: 15,
+          amplitude: 6,
           speed: 0.4,
           points: 3,
         }}
-        className="absolute bottom-0 left-0 w-full h-[34vh] z-0"
+        className="absolute bottom-0 left-0 w-full h-[34vh] z-0 pointer-events-none"
       />
       {/* 🌞/🌙 Theme Toggle — posisi tetap */}
         <img
@@ -156,9 +156,13 @@ export default function HomeMobile() {
       <Motion className="bottom-0" isVisible={showLinks}>
         <Links onClose={() => setShowLinks(false)} theme={theme} /> {/* 🟢 theme dikirim ke Links */}
       </Motion>
-      <Motion className="left-[30px] top-5" isVisible={showContact}>
+      <Motion className="bottom-0" isVisible={showContact}>
         <Contact onClose={() => setShowContact(false)} />
       </Motion>
+      {/* Footer Copyright */}
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm text-blue-primary select-none pointer-events-none">
+        © {new Date().getFullYear()} Abisena Rais
+      </div>
     </div>
   );
 }

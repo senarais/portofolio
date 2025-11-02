@@ -1,28 +1,25 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { ReactNode } from "react";
 
 interface MotionProps {
   children: ReactNode;
   isVisible: boolean;
-  onClose?: () => void;
   className?: string;
 }
 
-export default function Motion({ children, isVisible, onClose, className = "" }: MotionProps) {
+export default function MotionMobile({
+  children,
+  isVisible,
+  className = "",
+}: MotionProps) {
   return (
-    <AnimatePresence initial={false}>
-      {isVisible && (
-        <motion.div
-          key="animated-content"
-          initial={{ opacity: 0, y: "100%" }}           // mulai dari bawah layar
-          animate={{ opacity: 1, y: 0 }}               // geser ke posisi normal
-          exit={{ opacity: 0, y: "100%" }}             // slide balik ke bawah pas close
-          transition={{ duration: 0.4, ease: "easeInOut" }}  // biar smooth
-          className={`absolute w-full items-center rounded-xl shadow-lg z-20 ${className}`}
-        >
-          {children}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      className={`
+        absolute w-full items-center rounded-xl shadow-lg transition-all duration-500 ease-in-out
+        ${isVisible ? "opacity-100 translate-y-0 z-20 pointer-events-auto" : "opacity-0 translate-y-full z-4 pointer-events-none"}
+        ${className}
+      `}
+    >
+      {children}
+    </div>
   );
 }
