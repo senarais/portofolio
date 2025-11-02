@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
-/* GLOBAL ANTI-SCROLL FIX */
+/* GLOBAL ANTI-SCROLL FIX with DVH (Dynamic Viewport Height) */
 html, body {
     overflow: hidden; 
+    
+    /* Gunakan 100dvh untuk FIX Mobile Nav Bar, 100vh sebagai fallback */
+    height: 100dvh; 
+    height: 100vh; 
     width: 100%;
-    height: 100%; 
+    
     overscroll-behavior: none;
 }
 
 /* HACK: FIX Address Bar Mobile/Viewport */
 body {
     position: fixed;
+    height: 100dvh;
+    height: 100vh;
     width: 100%;
-    height: 100%;
 }
 
 /* Base Variables (Default Light)*/
