@@ -87,7 +87,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full h-screen bg-white-primary flex justify-center items-center select-none overflow-hidden relative transition-colors duration-300">
+    <div className="w-full h-dvh bg-white-primary flex justify-center items-center select-none overflow-hidden relative transition-colors duration-300">
       {/* 🐧 Penguin tetap di pojok bawah kanan */}
       <img
         src={isPlaying ? "/penguin.gif" : "/penguin.png"}

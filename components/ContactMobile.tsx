@@ -19,7 +19,7 @@ export default function Contact({ onClose }: ContactProps) {
   };
 
   return (
-    <div className="relative w-full h-[80vh] bottom-0 pb-0 bg-white-primary rounded-xl border border-gray-400 shadow-xl overflow-hidden flex flex-col">
+    <div className="relative w-full h-[80vh] bottom-0 pb-0 bg-white-primary rounded-t-xl border border-gray-400 shadow-xl overflow-hidden flex flex-col">
       
       {/* Header */}
       <div className="absolute top-0 left-0 rounded-t-xl w-full h-[60px] bg-blue-primary flex items-center justify-between px-6 text-lg z-10 text-white-primary">
