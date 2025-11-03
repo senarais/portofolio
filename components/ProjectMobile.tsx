@@ -105,7 +105,7 @@ export default function ProjectMobile({ onClose }: Props) {
             image="/project/5.png"
             description="a clean landing page design for an antivirus product called rhinowall."
             details="built fully with native html, css, and javascript for lightweight performance."
-            link="https://nolan.example.com"
+            link="http://rhinowall.vercel.app/"
           />
 
           <ProjectCard
