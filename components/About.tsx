@@ -176,6 +176,9 @@ export default function About({ onClose }: Props) {
                 developing cool apps, like for real, i enjoy it.
               </li>
               <li className="text-blue-primary text-xl leading-relaxed">
+                fast typinggg, currently 109 WPM!
+              </li>
+              <li className="text-blue-primary text-xl leading-relaxed">
                 love indomie, i do think it's the best ever food.
               </li>
               <li className="text-blue-primary text-xl leading-relaxed">
