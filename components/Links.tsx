@@ -75,7 +75,7 @@ export default function Links({ onClose, theme }: Props) {
           <SocialLink
             src={themedIcon("cv.png")}
             label="cv"
-            href="https://www.youtube.com/abisena27"
+            href="https://drive.google.com/file/d/1VFyD22Sbi4N1C4NigQjp9FRBpCTVL_vB/view?usp=sharing"
           />
         </div>
 
