@@ -31,7 +31,7 @@ export default function LinksMobile({ onClose, theme }: Props) {
   return (
     <div className="relative w-full h-[80vh] bottom-0 pb-0 bg-white-primary rounded-t-xl border border-gray-400 shadow-xl overflow-hidden flex flex-col">
       {/* header */}
-      <div className="text-white-primary rounded-t-xl w-full h-[60px] bg-blue-primary flex items-center justify-between px-6 text-xl flex-shrink-0">
+      <div className="text-white-primary rounded-t-xl w-full h-[60px] bg-blue-primary flex items-center justify-between px-6 text-xl shrink-0">
         <p>links</p>
         <motion.button
           onClick={handleClose}
