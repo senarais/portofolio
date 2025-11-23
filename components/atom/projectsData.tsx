@@ -29,6 +29,15 @@ export const projects: ProjectData[] = [
     link: "https://secureland.vercel.app/",
   },
   {
+    title: "klaimo",
+    image: "/project/6.png",
+    description:
+      "an ai-powered pre-verification system that checks bpjs claim eligibility before submission.",
+    details:
+      "built with next.js and gemini api to analyze clinical data, generate medical reasoning, and suggest improvements before claims are sent.",
+    link: "https://klaimo-chi.vercel.app/",
+  },
+  {
     title: "first portofolio project",
     image: "/project/4.png",
     description: "my first ever portfolio project — made for gdg weekly class final project.",
