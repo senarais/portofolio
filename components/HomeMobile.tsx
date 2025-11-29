@@ -103,6 +103,8 @@ export default function HomeMobile() {
           pointer-events-auto select-none
         "
       />
+      {/* preload gif */}
+      <img src="/penguin.gif" alt="" style={{ display: "none" }} />
 
       {/* 🌊 Wave Background */}
       <Wave
