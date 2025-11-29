@@ -103,6 +103,8 @@ export default function Home() {
           pointer-events-auto select-none
         "
       />
+      {/* preload gif */}
+      <img src="/penguin.gif" alt="" style={{ display: "none" }} />
 
 
       {/* 🌊 Wave Background */}
