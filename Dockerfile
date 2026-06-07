@@ -6,7 +6,10 @@
 FROM node:20-alpine AS base
 # libc6-compat helps some native deps run on Alpine's musl libc.
 RUN apk add --no-cache libc6-compat
-RUN corepack enable
+# Update corepack first so it can verify/download modern pnpm (avoids the
+# outdated-signing-key error), then activate the exact pnpm version pinned
+# in package.json's "packageManager" field.
+RUN npm install -g corepack@latest && corepack enable
 WORKDIR /app
 
 # ============================================================
