@@ -10,6 +10,7 @@ import Project from "@/components/Project";
 import Wave from "react-wavify";
 import Links from "@/components/Links";
 import Contact from "@/components/Contact";
+import PixelClouds from "@/components/atom/PixelClouds";
 
 export default function Home() {
   const [showAbout, setShowAbout] = useState(false);
@@ -87,6 +88,9 @@ export default function Home() {
 
   return (
     <div className="w-full h-dvh bg-white-primary flex justify-center items-center select-none overflow-hidden relative transition-colors duration-300">
+      {/* ☁️ Awan pixel bergerak di background */}
+      <PixelClouds />
+
       {/* 🐧 Penguin tetap di pojok bawah kanan */}
       <img
         src={isPlaying ? "/penguin.gif" : "/penguin.png"}

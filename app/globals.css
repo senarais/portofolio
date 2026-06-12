@@ -13,6 +13,10 @@
   --color-blue-primary: #213448;
   --color-blue-secondary: #94B4C1;
   --color-blue-tertiary: #547792;
+
+  /* ☁️ warna awan pixel */
+  --cloud-body: #ffffff;
+  --cloud-shadow: #d6dbe3;
 }
 
 /* ============================= */
@@ -29,6 +33,10 @@
   --color-blue-primary: #88C0D0;
   --color-blue-secondary: #5E81AC;
   --color-blue-tertiary: #81A1C1;
+
+  /* ☁️ awan malam: lebih redup & kebiruan */
+  --cloud-body: #3a4256;
+  --cloud-shadow: #2a3040;
 }
 
 /* ============================= */
@@ -83,4 +91,19 @@ body {
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+/* ============================= */
+/* Awan pixel melayang ☁️        */
+/* ============================= */
+@keyframes cloud-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100vw - 160px)); }
+}
+
+/* Hormati user yang gak suka animasi */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-clouds > * {
+    animation: none !important;
+  }
 }
